@@ -71,8 +71,12 @@ class HomePage extends StatelessWidget {
                                       onPressed: () {
                                         controller.checkifadded();
                                         cartproducts.add(allproducts[index]);
-                                        log("${cartproducts.length}");
+                                        Get.defaultDialog(
+                                            middleText: "Added to cart");
                                       },
+                                      style: ElevatedButton.styleFrom(
+                                        primary: Colors.black,
+                                      ),
                                       child: Text("Add to cart")))
                             ],
                           ),
